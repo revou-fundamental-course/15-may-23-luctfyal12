@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+    <link href="css/style.css" rel="stylesheet">
+    <title>Hello Math</title>
+</head>
+<body>
+    <header>
+        <h1>Hello Math</h1>
+    </header>
+    <main>
+        <div class="background-transparant">
+            <div class="welcome-text">
+                <h1>Welcome to 'Hello Math'</h1>
+                <h2>Hello Friends, Welcome to Hello Math. <br>
+                Disini kalian bisa menghitung luas dari sebuah bangun datar.</h2>
+            </div>
+            <div class="short-divider"></div>
+            <div class="option">
+                <h2>Pilih Bangun Datar!</h2>
+                <div class="option-shape">
+                    <div id="btn-square">Persegi</div>
+                    <div id="btn-rectangle">Persegi Panjang</div>
+                </div>
+            </div>
+            <div class="long-divider"></div>
+            <div id="container">
+                <div class="content-info">
+                    <div class="option-formula">
+                        <h1 id="op-keliling">Keliling</h1>
+                        <h1 id="op-luas">Luas</h1>
+                    </div>
+                    <div class="text">
+                        <div id="op-text-square">
+                            <div class="keliling-box">
+                                <div class="op-text-keliling">
+                                    <img src="https://assets.kejarcita.id/Px6NWVatRCjf2ufycp33oagx" alt=""/>
+                                    <p>Rumus Keliling Persegi yaitu:</p>
+                                    <p>K= 4 x S</p>
+                                    <p>Di mana:</p>
+                                    <p>K= Keliling</p>
+                                    <p>S= Sisi</p>
+                                </div>
+                                <form class="form-hitung-keliling">
+                                    <h1>Hitung Keliling</h1>
+                                    <input type="number" id="sisi-keliling-persegi" placeholder="Masukkan Panjang Sisi" required/>
+                                    <button type="button" id="hitung-keliling-persegi" value="Hitung" onclick="multiplyKeliling()">Hitung</button>
+                                    <p class="answer" >K= 4 x S</p>
+                                    <p class="answer" >K= 4 x <span id="output-sisi-keliling-persegi"></span></p>
+                                    <p class="answer" >K= <span id="output-keliling-persegi"></span></p>
+                                </form>
+                            </div>
+                            <div class="luas-box">
+                                <div class="op-text-luas">
+                                    <img src="https://assets.kejarcita.id/Px6NWVatRCjf2ufycp33oagx" alt=""/>
+                                    <p>Rumus Luas Persegi yaitu:</p>
+                                    <p>L= S x S</p>
+                                    <p>Di mana:</p>
+                                    <p>L= Luas</p>
+                                    <p>S= Sisi</p>
+                                </div>
+                                <form class="form-hitung-luas">
+                                    <h1>Hitung Luas</h1>
+                                    <input type="number" id="sisi-luas-persegi" placeholder="Masukkan Panjang Sisi" required/>
+                                    <button type="button" id="hitung-luas-persegi" value="Hitung" onclick="multiplyLuas()">Hitung</button>
+                                    <p>K= S x S</p>
+                                    <p>K= <span id="output-sisi-luas1-persegi"></span> x <span id="output-sisi-luas2-persegi"></span></p>
+                                    <p>K= <span id="output-luas-persegi"></span></p>
+                                </form>
+                            </div>
+                        </div>
+                       <div id="op-text-rectangle">
+                            <div class="keliling-box">
+
+                                <div class="op-text-keliling">
+                                    <img src="https://rumuspintar.com/wp-content/uploads/2019/07/Persegi-Panjang.jpg" alt=""/>
+                                    <p>Rumus Keliling Persegi Panjang yaitu:</p>
+                                    <p>K= 2 x (p + l)</p>
+                                    <p>Di mana:</p>
+                                    <p>K= Keliling</p>
+                                    <p>p= Panjang</p>
+                                    <p>l= lebar</p>
+                                </div>
+
+                                <form class="form-hitung-keliling">
+                                    <h1>Hitung Keliling</h1>
+                                    <input type="number" id="panjang-keliling-persegi-panjang" placeholder="Masukkan Panjang" required/>
+                                    <input type="number" id="lebar-keliling-persegi-panjang" placeholder="Masukkan Lebar" required/>
+                                    <button type="button" id="hitung-keliling-persegi-panjang" value="Hitung" onclick="multiplyKelilingPP()">Hitung</button>
+                                    <p class="answer-keliling">K= 2 x (p + l)</p>
+                                    <p class="answer-keliling">K= 2 x (<span id="output-panjang-keliling-persegi-panjang"></span> + <span id="output-lebar-keliling-persegi-panjang"></span>)</p>
+                                    <p class="answer-keliling">K= <span id="output-keliling-persegi-panjang"></span></p>
+                                </form>
+
+                            </div>
+                            <div class="luas-box">
+
+                                <div class="op-text-luas">
+                                    <img src="https://rumuspintar.com/wp-content/uploads/2019/07/Persegi-Panjang.jpg" alt=""/>
+                                    <p>Rumus Luas Persegi Panjang yaitu:</p>
+                                    <p>L= p x l</p>
+                                    <p>Di mana:</p>
+                                    <p>L= Luas</p>
+                                    <p>p= Panjang</p>
+                                    <p>l= Lebar</p>
+                                </div> 
+
+                                <form class="form-hitung-luas">
+                                    <h1>Hitung Luas</h1>
+                                    <input type="number" id="panjang-luas-persegi-panjang" placeholder="Masukkan Panjang" required/>
+                                    <input type="number" id="lebar-luas-persegi-panjang" placeholder="Masukkan Lebar" required/>
+                                    <button type="button" id="hitung-luas-persegi-panjang" value="Hitung" onclick="multiplyLuasPP()">Hitung</button>
+                                    <p>K= p x l</p>
+                                    <p>K= <span id="output-panjang-luas-persegi-panjang"></span> x <span id="output-lebar-luas-persegi-panjang"></span></p>
+                                    <p>K= <span id="output-luas-persegi-panjang"></span></p>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2>Thank You For Coming</h2>
+        <p> &copy; 2023 &middot; Designed By: Luctfy</p>
+    </footer>
+    <script src="/js/script.js"></script>
+</body>
+</html>
