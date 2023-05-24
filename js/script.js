@@ -19,7 +19,7 @@ btnop1.addEventListener('click', () => {
         opTextSquare.style.display = ''
         cont.style.display = 'none';
         btnop1.style.backgroundColor = '#5297FF';
-        btnop1.style.color = 'white'; 
+        btnop1.style.color = 'white';
     } 
 }); 
 

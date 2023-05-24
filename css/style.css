@@ -60,10 +60,10 @@ header h1 {
     margin: 10px 10px;
 }
 
-/* #btn-square:hover, #btn-rectangle:hover {
+#btn-square:hover, #btn-rectangle:hover {
     background-color: aliceblue;
     color: black;
-} */
+}
 
 .long-divider {
     border: 2px solid rgb(163, 161, 161);
