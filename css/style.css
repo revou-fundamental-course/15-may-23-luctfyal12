@@ -186,7 +186,13 @@ footer h2, footer p {
     padding: 5px
 }
 
+button {
+    width: 100px;
+    height: 30px;
+    font-family: 'IBM Plex Mono'; 
+    font-size: 1rem;
 
+}
 
 
 
